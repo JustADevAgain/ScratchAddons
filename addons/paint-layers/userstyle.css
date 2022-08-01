@@ -1,0 +1,31 @@
+.paint-layers-panel {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-width: min-content;
+  padding: 0 8px;
+}
+
+.paint-layers-panel.hidden {
+  display: none;
+}
+
+.paint-layers-panel .layers {
+  margin: auto;
+}
+
+.paint-layers-panel .layer {
+  border: black solid 2px;
+  border-radius: 5px;
+  margin: 8px 0;
+  width: 64px;
+  height: 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.paint-layers-icon:not(.selected) {
+  filter: saturate(0);
+}
