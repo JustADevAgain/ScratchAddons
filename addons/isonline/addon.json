@@ -1,0 +1,22 @@
+{
+  "name": "IsOnline",
+  "description": "Adds an indicator to usernames that shows whether they're online or not, in addition to letting others see if you're online or not.",
+  "userscripts": [
+    {
+      "matches": ["https://scratch.mit.edu/*"],
+      "url": "userscript.js"
+    },
+    { "matches": ["profiles"], "url": "profile.js" }
+  ],
+  "userstyles": [
+    {
+      "url": "userscript.css",
+      "matches": ["profiles"]
+    }
+  ],
+  "dynamicEnable": true,
+  "dynamicDisable": true,
+  "tags": ["community", "recommended"],
+  "versionAdded": "1.31.0",
+  "enabledByDefault": false
+}
