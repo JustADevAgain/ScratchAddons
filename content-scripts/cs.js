@@ -97,7 +97,7 @@ const cs = {
   copyImage(dataURL) {
     // Firefox only
     return new Promise((resolve, reject) => {
-      browser.runtime.sendMessage({ clipboardDataURL: dataURL }).then(
+      chrome.runtime.sendMessage({ clipboardDataURL: dataURL }).then(
         (res) => {
           resolve();
         },
@@ -117,6 +117,42 @@ const cs = {
           },
         },
         (res) => resolve(res)
+      );
+    });
+  },
+  updateAddonStorage(addonID, prop, value, sync) {
+    // Addon called the `addon.storage.*.set` method
+    return new Promise((resolve) => {
+      console.debug("set", addonID, prop, value, sync);
+      chrome.runtime.sendMessage(
+        {
+          updateAddonStorage: {
+            addonID,
+            prop,
+            value,
+            sync,
+          },
+        },
+        () => resolve()
+      );
+    });
+  },
+  getFromAddonStorage(addonID, prop, sync) {
+    // Addon called the `addon.storage.*.get` method
+    return new Promise((resolve) => {
+      console.debug("get", addonID, sync);
+      chrome.runtime.sendMessage(
+        {
+          getFromAddonStorage: {
+            addonID,
+            prop,
+            sync,
+          },
+        },
+        (value) => {
+          console.debug(value);
+          resolve(value);
+        }
       );
     });
   },
