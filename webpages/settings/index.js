@@ -173,6 +173,8 @@ let fuse;
         forceEnglishSettingInitial: null,
         switchPath: "../../images/icons/switch.svg",
         moreSettingsOpen: false,
+        relatedAddonsOpen: false,
+        relatedAddons: [],
         categoryOpen: true,
         loaded: false,
         searchLoaded: false,
@@ -267,6 +269,13 @@ let fuse;
         if (vue.smallMode) {
           vue.sidebarToggle();
         }
+      },
+      openRelatedAddons(addonManifest) {
+        this.relatedAddons.length = 0;
+        for (const relatedManifest of addonManifest._relatedAddons) {
+          this.relatedAddons.push(relatedManifest);
+        }
+        this.relatedAddonsOpen = true;
       },
       sidebarToggle: function () {
         this.categoryOpen = !this.categoryOpen;
@@ -601,6 +610,14 @@ let fuse;
         vue.addonGroups.find((g) => g.id === groupId)?.addonIds.push(manifest._addonId);
       }
       cleanManifests.push(deepClone(manifest));
+    }
+
+    for (const { manifest } of manifests) {
+      if (manifest.relatedAddons) {
+        manifest._relatedAddons = manifest.relatedAddons.map(
+          (relatedAddonId) => manifests.find(({ addonId }) => addonId === relatedAddonId).manifest
+        );
+      }
     }
 
     // Manifest objects will now be owned by Vue
