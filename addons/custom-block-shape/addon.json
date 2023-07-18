@@ -12,6 +12,10 @@
       "link": "https://scratch.mit.edu/users/lisa_wolfgang/"
     },
     {
+      "name": "Yande",
+      "link": "https://scratch.mit.edu/users/YandeMC/"
+    },
+    {
       "name": "GarboMuffin",
       "link": "https://scratch.mit.edu/users/GarboMuffin/"
     }
@@ -51,6 +55,20 @@
       "max": 300
     },
     {
+      "name": "Reporter Wall Thickness (0-150%)",
+      "id": "wall",
+      "type": "integer",
+      "min": 0,
+      "default": 100,
+      "max": 150
+    },
+    {
+      "name": "Flat Hats",
+      "id": "flat",
+      "type": "boolean",
+      "default": false
+    },
+    {
       "name": "Notch height (0-150%)",
       "id": "notchSize",
       "type": "integer",
@@ -67,7 +85,9 @@
       "values": {
         "paddingSize": 100,
         "cornerSize": 100,
-        "notchSize": 100
+        "notchSize": 100,
+        "wall": 100,
+        "flat": false
       }
     },
     {
@@ -77,27 +97,33 @@
       "values": {
         "paddingSize": 70,
         "cornerSize": 150,
-        "notchSize": 75
+        "notchSize": 75,
+        "wall": 100,
+        "flat": false
       }
     },
     {
       "name": "3.0 Flat",
       "id": "flat3",
-      "description": "Scratch 3.0 blocks with notches and corners removed",
+      "description": "Scratch 3.0 blocks with notches, corners, and hat bumps removed",
       "values": {
         "paddingSize": 100,
         "cornerSize": 0,
-        "notchSize": 0
+        "notchSize": 0,
+        "wall": 100,
+        "flat": true
       }
     },
     {
       "name": "2.0 Flat",
       "id": "flat2",
-      "description": "Scratch 2.0 blocks with notches and corners removed",
+      "description": "Scratch 2.0 blocks with notches, corners, and hat bumps removed",
       "values": {
         "paddingSize": 70,
         "cornerSize": 0,
-        "notchSize": 0
+        "notchSize": 0,
+        "wall": 100,
+        "flat": true
       }
     }
   ]
