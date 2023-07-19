@@ -1,0 +1,78 @@
+{
+  "name": "Accessibility settings",
+  "description": "More settings for the editor for visual and cognitive aid.",
+  "credits": [
+    {
+      "name": "SolomonkJr",
+      "link": "https://scratch.mit.edu/users/SolomonkJr/"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects", "projectEmbeds"]
+    }
+  ],
+  "info": [
+    {
+      "type": "info",
+      "text": "Reload the page after deactivating the pictogram option to delete them.",
+      "id": "pictoRestart"
+    },
+    {
+      "type": "notice",
+      "text": "In the \"Hide Blocks\" section, press the F8 key on the block you want to hide. To restore the blocks, refresh the page.",
+      "id": "f8Key"
+    }
+  ],
+  "settings": [
+    {
+      "name": "Set Font",
+      "id": "fontSelector",
+      "type": "select",
+      "default": "arial",
+      "potentialValues": [
+        {
+          "id": "arial",
+          "name": "Arial"
+        },
+        {
+          "id": "verdana",
+          "name": "Verdana"
+        },
+        {
+          "id": "comicSans",
+          "name": "Comic Sans"
+        }
+      ]
+    },
+    {
+      "name": "Font Size",
+      "id": "fontSizer",
+      "type": "positive_integer",
+      "default": 12,
+      "min": 5,
+      "max": 30
+    },
+    {
+      "name": "@brush2.svg Pictograms",
+      "id": "texToPic",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "@list.svg Hide Blocks (F8)",
+      "id": "hideBlocks",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "@comment.svg Text-To-Speech",
+      "id": "textToSpeechEnabled",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "versionAdded": "1.33.0",
+  "tags": ["editor", "codeEditor", "editorMenuBar"]
+}
