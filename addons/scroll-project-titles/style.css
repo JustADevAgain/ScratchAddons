@@ -1,0 +1,4 @@
+.preview .project-title.no-edit {
+  overflow-x: scroll;
+  text-overflow: clip;
+}
