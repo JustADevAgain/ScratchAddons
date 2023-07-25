@@ -1,0 +1,25 @@
+{
+  "name": "Code analysis",
+  "description": "Shows how many blocks from each block category projects use.",
+  "tags": ["community", "projectPage"],
+  "versionAdded": "1.34.0",
+  "credits": [
+    {
+      "name": "Gandi IDE",
+      "link": "https://github.com/Gandi-IDE"
+    }
+  ],
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"],
+      "runAtComplete": true
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "style.css",
+      "matches": ["projects"]
+    }
+  ]
+}
