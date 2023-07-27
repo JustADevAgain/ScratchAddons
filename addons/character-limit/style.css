@@ -1,0 +1,14 @@
+.desc-limit {
+  padding-left: 7px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.studio-desc-limit {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.limit-hidden {
+  display: none !important;
+}
