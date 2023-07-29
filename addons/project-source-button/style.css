@@ -1,0 +1,12 @@
+#view-json-btn {
+  margin: 0 0 0 0.5rem;
+  border-radius: 19px;
+  background-color: #4d97ff;
+  padding: 0 0.75rem;
+  height: 2rem;
+  text-decoration: none;
+  line-height: 0.875rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: none;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Project source button",
+  "description": "View a Scratch project's source json and source assets.",
+  "tags": ["community", "projectPage"],
+  "enabledByDefault": false,
+  "versionAdded": "1.32.0",
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects"]
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "style.css",
+      "matches": ["projects"]
+    }
+  ],
+  "credits": [
+    {
+      "name": "GrahamSH",
+      "link": "https://github.com/grahamsh-llk/project-inspector"
+    },
+    {
+      "name": "nakasyou",
+      "link": "https://scratch.mit.edu/users/nakasyou1103"
+    }
+  ]
+}

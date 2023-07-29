@@ -135,6 +135,7 @@
   "rename-broadcasts",
   "middle-click-popup",
   "number-pad",
+  "project-source-button",
   "necropost-highlighter",
   "copy-reporter",
   "share-through-mystuff",
@@ -143,7 +144,6 @@
   "op-badge",
   "featured-dangos-v2",
   "remember-collapsed-categories",
-
   "// NEW ADDONS ABOVE THIS ↑↑",
   "// Note: these themes need this exact order to work properly,",
   "// because the first in the list gets their CSS injected first,",
