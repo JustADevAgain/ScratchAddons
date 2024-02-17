@@ -1,16 +1,46 @@
 {
-  "name": "Local timezone on forums",
-  "description": "Uses your local time zone for displaying post dates and times on the forums.",
+  "name": "Forum time changer",
+  "description": "Changes the way the date and time is displayed on the forums.",
   "userscripts": [
     {
-      "url": "userscript.js",
+      "url": "timezones.js",
       "matches": ["topics"],
       "runAtComplete": false
+    }
+  ],
+  "credits": [
+    {
+      "name": "god286/webdev03",
+      "link": "https://github.com/webdev03"
+    },
+    {
+      "name": "_nix",
+      "link": "https://github.com/towerofnix"
     }
   ],
   "dynamicEnable": true,
   "dynamicDisable": true,
   "versionAdded": "1.0.0",
   "tags": ["forums", "community"],
+  "settings": [
+    {
+      "name": "Use local timezone",
+      "id": "local-timezone",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "Use twelve hour time",
+      "id": "twelve-hour-time",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "Use relative dates",
+      "id": "relative-dates",
+      "type": "boolean",
+      "default": true
+    }
+  ],
   "enabledByDefault": false
 }
