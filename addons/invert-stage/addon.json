@@ -1,0 +1,27 @@
+{
+  "name": "Invert Stage",
+  "description": "Inverts the stage. Useful for testing contrast and people with colorblindness.",
+  "tags": ["editor", "projectPlayer"],
+  "versionAdded": "1.36.0",
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["projects", "projectEmbeds"]
+    }
+  ],
+  "userstyles": [
+    {
+      "url": "style.css",
+      "matches": ["projects", "projectEmbeds"]
+    }
+  ],
+  "credits": [
+    {
+      "name": "michealtheratz",
+      "link": "https://github.com/gamemake-eng"
+    }
+  ],
+  "dynamicDisable": true,
+  "dynamicEnable": true,
+  "enabledByDefault": false
+}

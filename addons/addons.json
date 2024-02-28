@@ -151,8 +151,10 @@
   "paint-skew",
   "preview-project-description",
   "collapse-footer",
+  "invert-stage",
   "reorder-custom-inputs",
   "place-backpack-code-at-cursor",
+
 
   "// NEW ADDONS ABOVE THIS ↑↑",
   "// Note: these themes need this exact order to work properly,",
