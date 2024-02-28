@@ -25,6 +25,16 @@ export default [
     iframeShow: true,
     fullscreenShow: false,
   },
+  {
+    id: "favouriteAddons",
+    name: chrome.i18n.getMessage("favouriteAddons"),
+    addonIds: !JSON.parse(localStorage.getItem("favouriteAddons"))
+      ? []
+      : JSON.parse(localStorage.getItem("favouriteAddons")),
+    expanded: true,
+    iframeShow: true,
+    fullscreenShow: true,
+  },
 
   {
     id: "featuredNew",
